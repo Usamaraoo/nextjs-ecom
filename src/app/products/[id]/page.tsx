@@ -3,7 +3,7 @@ import { Metadata } from "next"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { cache } from "react"
-
+import AddToCartButton from './addToCartButton'
 interface ProductPageProps {
     params:{
         id:string
@@ -37,6 +37,10 @@ export default async function ProductPage({params:{id}}:ProductPageProps ){
     <h1 className="text-4xl font-bold leading-normal">{productDetail.name}</h1>
     <p className="text-primary font-semibold">{productDetail.price} $</p>
     <p className="leading-9 mt-4">{productDetail.description}</p>
+    <div className="mt-4">
+
+    <AddToCartButton productId={productDetail.id} />
+    </div>
 </div>
 </div>
 )
