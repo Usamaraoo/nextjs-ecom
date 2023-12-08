@@ -17,3 +17,15 @@ model Product {
   updatedAt   DateTime @default(now())
   @@map("product")
 }
+
+
+model Cart {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  description String
+  imgaeUrl    String
+  name        String
+  price       Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @default(now())
+  @@map("cart")
+}

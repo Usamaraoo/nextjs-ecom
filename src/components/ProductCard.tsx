@@ -11,7 +11,7 @@ export const ProductCard = ({product}:ProductCardProp) => {
     const isNew =Date.now() - new Date(product.createdAt).getTime() < 1000 * 60 * 60 *24 * 7
     return (
         <div className="card card-compact w-96 bg-base-100 shadow-xl  overflow-hidden ">
-            <Link  href={`/product`+ id}>
+            <Link  href={`/products/`+ id}>
             <figure>
                 <Image  style={{maxWidth:'100%',maxHeight:250, objectFit:"cover"}} width={500} height={500} src={product.imgaeUrl} alt="Shoes" />
             </figure>
